@@ -6,6 +6,8 @@ RUN addgroup -S centrifugo && adduser -S -G centrifugo centrifugo \
 
 ADD centrifugo /usr/bin/centrifugo
 
+RUN chmod +x /usr/bin/centrifugo
+
 VOLUME ["/centrifugo", "/var/log/centrifugo"]
 
 WORKDIR /centrifugo
